@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+
+  php:
+    image: php
+    hostname: php
+    container_name: php
+    build:
+      context: ./
+      dockerfile: ./docker/php/Dockerfile
+    ports:
+      - "8090:80"
+    volumes:
+      - ./app/:/var/www/html/
+      - ./docker/php/ini/php.ini:/usr/local/etc/php/php.ini
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - network-digital-codigos
+
+networks:
+  network-digital-codigos:
+    driver: bridge
+    external: false
+    name: network-digital-codigos
