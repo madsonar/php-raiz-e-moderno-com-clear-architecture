@@ -16,17 +16,27 @@ Neste projeto, optei por não utilizar nenhum framework por completo. O objetivo
 
 ## Como Usar
 
-O projeto já está todo configurado. Para rodá-lo, use os seguintes comandos:
+O projeto já está todo configurado. 
+Para iniciar os serviços, abra um terminal na raiz do projeto e execute o seguinte comando via Makefile:
 
-```sh
-docker-compose up -d
+### Com Makefile
+- Para iniciar o Docker Compose: 
+```make
+make up
+```
+- Para parar o Docker Compose: 
+```make
+make down
+```
+- Para iniciar o Docker Compose em modo detached: 
+```make
+make up-detached
+```
+- Para construir as imagens do Docker Compose: 
+```make
+make build
 ```
 
-E para finalizar:
-
-```sh
-docker-compose down
-```
 ## Rotas para Teste
 
 Inicialmente, temos duas rotas para teste:

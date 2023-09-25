@@ -1,5 +1,34 @@
 FROM php:8.2.11RC1-apache
 
+# Atualizar a lista de pacotes e instalar as dependências necessárias
+RUN apt-get update && apt-get install -y \
+    autoconf \
+    bison \
+    curl \
+    gcc \
+    git \
+    libbz2-dev \
+    libcurl4-openssl-dev \
+    libicu-dev \
+    libjpeg-dev \
+    libmcrypt-dev \
+    libonig-dev \
+    libpng-dev \
+    libreadline-dev \
+    libssl-dev \
+    libtidy-dev \
+    libxml2 \
+    libxml2-dev \
+    libxslt1-dev \
+    libzip-dev \
+    make \
+    openssl \
+    re2c \
+    unzip \
+    wget \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
 #Config Apache
 COPY ./docker/php/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 
