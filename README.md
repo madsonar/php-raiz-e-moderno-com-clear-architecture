@@ -30,11 +30,21 @@ make down
 ```
 - Para iniciar o Docker Compose em modo detached: 
 ```make
-make up-detached
+make up-d
 ```
 - Para construir as imagens do Docker Compose: 
 ```make
 make build
+```
+```
+- O comando make tests é utilizado para executar os testes dentro do container PHP
+```make
+make tests
+```
+```
+- O comando make cmd permite executar comandos arbitrários dentro do container PHP a partir do host local 
+```make
+make cmd c="ls -la"
 ```
 
 ## Rotas para Teste

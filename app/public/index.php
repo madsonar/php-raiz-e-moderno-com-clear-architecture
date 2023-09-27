@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once dirname(dirname(__DIR__)) . '/vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

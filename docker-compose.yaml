@@ -11,7 +11,7 @@ services:
     ports:
       - "8090:80"
     volumes:
-      - ./app/:/var/www/html/
+      - ./:/var/www/html/
       - ./docker/php/ini/php.ini:/usr/local/etc/php/php.ini
     extra_hosts:
       - "host.docker.internal:host-gateway"
