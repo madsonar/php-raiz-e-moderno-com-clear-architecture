@@ -21,7 +21,7 @@ up-build: init-script
 
 tests:
 	@echo "Executando os testes dentro do container PHP..."
-	@docker-compose exec php vendor/bin/phpunit
+	@docker-compose exec php vendor/bin/phpunit --coverage-text=php://stdout
 
 cmd:
 	@echo "Executando o comando dentro do container PHP..."
